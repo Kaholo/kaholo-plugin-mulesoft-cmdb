@@ -12,7 +12,8 @@ async function sendMuleSoftReq(settings, service, params){
         service: service,
         params: params
     }
-    const response = await fetch(settings.endpoint, {
+    const reqUrl = `${settings.endpoint}/usu/api/cmdb/services`;
+    const response = await fetch(reqUrl, {
         method: 'post',
         body:    JSON.stringify(body),
         headers: { 'Content-Type': 'application/json' },
