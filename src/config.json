@@ -1,0 +1,114 @@
+{
+  "name": "MuleSoft-CMDB",
+  "type": "executer",
+  "imgUrl": "logo.png",
+  "execProgram": "node",
+  "main": "app.js",
+  "version": "1.0.0",
+  "description":"MuleSoft CMDB plugin",
+  "settings":[
+    {
+      "name": "endpoint",
+      "viewName": "Endpoint URL",
+      "type": "string"
+    },
+    {
+      "name": "username",
+      "viewName": "User Name",
+      "type": "string"
+    },
+    {
+      "name": "password",
+      "viewName": "Password",
+      "type": "vault"
+    }
+  ],
+  "methods": [
+    {
+      "name": "getObjects",
+      "viewName": "GetObjects",
+      "params": [
+        {
+          "name": "type",
+          "viewName": "Object Type",
+          "type": "options",
+          "options": [
+            {
+              "id":"Component",
+              "name": "Component"
+            },
+            {
+              "id":"Type",
+              "name": "Type"
+            },
+            {
+              "id":"TypeClass",
+              "name": "TypeClass"
+            },
+            {
+              "id":"System",
+              "name": "System"
+            },
+            {
+              "id":"Manufacturer",
+              "name": "Manufacturer"
+            }
+          ]
+        },
+        {
+          "name": "condition",
+          "viewName": "Condition",
+          "type": "string"
+        },
+        {
+          "name": "fieldsKeys",
+          "viewName": "Fields Keys",
+          "type": "text"
+        },
+        {
+          "name": "useDisplayValues",
+          "viewName": "Use Display Valuese",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "createObject",
+      "viewName": "Create Object",
+      "params": [
+        {
+          "name": "type",
+          "viewName": "Object Type",
+          "type": "options",
+          "options": [
+            {
+              "id":"",
+              "name": ""
+            }
+          ]
+        },
+        {
+          "name": "fields",
+          "viewName": "Fields",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "changeObject",
+      "viewName": "Change Object",
+      "params": [
+        {
+          "name": "id",
+          "viewName": "ID",
+          "type": "string"
+        },
+        {
+          "name": "fields",
+          "viewName": "Fields",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
