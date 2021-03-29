@@ -82,8 +82,24 @@
           "type": "options",
           "options": [
             {
-              "id":"",
-              "name": ""
+              "id":"Component",
+              "name": "Component"
+            },
+            {
+              "id":"Type",
+              "name": "Type"
+            },
+            {
+              "id":"TypeClass",
+              "name": "TypeClass"
+            },
+            {
+              "id":"System",
+              "name": "System"
+            },
+            {
+              "id":"Manufacturer",
+              "name": "Manufacturer"
             }
           ]
         },

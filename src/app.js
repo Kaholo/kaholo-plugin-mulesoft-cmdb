@@ -39,7 +39,7 @@ async function createObject(action,settings) {
 }
 
 async function changeObject(action, settings){
-    const id = (action.params.type || "").trim();
+    const id = (action.params.id || "").trim();
     const fields = helpers.textToFields(action.params.fields);
     
     if (!id || !fields){
