@@ -26,7 +26,7 @@
   "methods": [
     {
       "name": "getObjects",
-      "viewName": "GetObjects",
+      "viewName": "Get Objects",
       "params": [
         {
           "name": "type",
