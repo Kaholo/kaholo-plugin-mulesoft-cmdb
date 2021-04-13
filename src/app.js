@@ -6,6 +6,10 @@ async function getObjects(action, settings) {
     const fieldsStr = (action.params.fieldsKeys || "").trim();
     const useDisplayValues = action.params.useDisplayValues || false;
     
+    return {
+        type, condition, fieldsStr, useDisplayValues
+    };
+
     if (!type || !fieldsStr){
         throw "One of the required fields was not given";
     }
