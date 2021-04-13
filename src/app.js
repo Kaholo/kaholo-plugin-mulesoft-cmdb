@@ -3,7 +3,7 @@ const helpers = require("./helpers");
 async function getObjects(action, settings) {
     const type = action.params.type;
     const condition = (action.params.condition || "").trim();
-    const fieldsStr = (action.params.conditionfield || "").trim();
+    const fieldsStr = (action.params.fieldsKeys || "").trim();
     const useDisplayValues = action.params.useDisplayValues || false;
     
     if (!type || !fieldsStr){
