@@ -11,7 +11,7 @@ async function getObjects(action, settings) {
     }
     const fields = fieldsStr.split("\n").map((field) => {
         if (field.endsWith("Id"))
-            return {name: field.trim(), useDisplayValue=useDisplayValues};
+            return {name: field.trim(), useDisplayValue:useDisplayValues};
         return {name: field.trim()};
     });
     params = { types: [{
