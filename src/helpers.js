@@ -27,7 +27,7 @@ async function sendMuleSoftReq(settings, service, params){
     throw responseObj;
 }
 
-async function textToFields(text){
+function textToFields(text){
     return text.split("\n").map((line) => {
         const [key, ...values] = line.trim().split("=");
         if (!values){
