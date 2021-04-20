@@ -4,7 +4,7 @@
   "imgUrl": "logo.png",
   "execProgram": "node",
   "main": "app.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description":"MuleSoft CMDB plugin",
   "settings":[
     {
@@ -14,12 +14,22 @@
     },
     {
       "name": "username",
-      "viewName": "User Name",
+      "viewName": "Basic Auth User Name",
       "type": "string"
     },
     {
       "name": "password",
-      "viewName": "Password",
+      "viewName": "Basic Auth Password",
+      "type": "vault"
+    },
+    {
+      "name": "bodyUsername",
+      "viewName": "Body User Name",
+      "type": "string"
+    },
+    {
+      "name": "bodyPassword",
+      "viewName": "Body Password",
       "type": "vault"
     }
   ],

@@ -1,13 +1,13 @@
 const fetch = require("node-fetch");
 
 async function sendMuleSoftReq(settings, service, params){
-    if (!settings.username || !settings.password || !settings.endpoint){
+    if (!settings.username || !settings.password || !settings.endpoint || !settings.bodyUsername || !settings.bodyPassword){
         throw "One of the settings wasn't set";
     }
     const body = {
-        accessToken: settings.password,
-        username: settings.username,
-        password: settings.password,
+        accessToken: settings.bodyPassword,
+        username: settings.bodyUsername,
+        password: settings.bodyPassword,
         encrypted: "Y",
         service: service,
         params: params

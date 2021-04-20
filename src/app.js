@@ -4,14 +4,14 @@ async function getObjects(action, settings) {
     const compType = action.params.type;
     const condition = (action.params.condition || "").trim();
     const fieldsStr = (action.params.fieldsKeys || "").trim();
-    const useDisplayValues = action.params.useDisplayValues || false;
+    const useDisplayValues = `"${action.params.useDisplayValues || false}"`;
     
     if (!compType || !fieldsStr){
         throw "One of the required fields was not given";
     }
     const fields = fieldsStr.split("\n").map((field) => {
         if (field.endsWith("Id"))
-            return {name: field.trim(), useDisplayValue:useDisplayValues};
+            return {name: field.trim(), useDisplayValue: useDisplayValues};
         return {name: field.trim()};
     });
     params = { types: [{
