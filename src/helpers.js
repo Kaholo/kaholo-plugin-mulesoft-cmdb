@@ -16,7 +16,10 @@ async function sendMuleSoftReq(settings, service, params){
     const response = await fetch(reqUrl, {
         method: 'post',
         body:    JSON.stringify(body),
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+            'Content-Type': 'application/json',
+            'Authorization': `Basic ${btoa(`${settings.username}:${settings.password}`)}`
+        },
     })
     return (await response.json());
 }
