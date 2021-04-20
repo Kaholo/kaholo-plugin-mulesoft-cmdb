@@ -13,15 +13,18 @@ async function sendMuleSoftReq(settings, service, params){
         params: params
     }
     const reqUrl = `${settings.endpoint}/usu/api/cmdb/services`;
-    const response = await fetch(reqUrl, {
+    const responseObj = await (await fetch(reqUrl, {
         method: 'post',
         body:    JSON.stringify(body),
         headers: { 
             'Content-Type': 'application/json',
             'Authorization': `Basic ${Buffer.from(`${settings.username}:${settings.password}`).toString('base64')}`
         },
-    })
-    return (await response.json());
+    })).json();
+    if (responseObj.returnCode === "00"){
+        return responseObj;
+    }
+    throw responseObj;
 }
 
 async function textToFields(text){
