@@ -5,9 +5,9 @@ async function sendMuleSoftReq(settings, service, params){
         throw "One of the settings wasn't set";
     }
     const body = {
-        accessToken: password,
-        username: username,
-        password: password,
+        accessToken: settings.password,
+        username: settings.username,
+        password: settings.password,
         encrypted: "Y",
         service: service,
         params: params
