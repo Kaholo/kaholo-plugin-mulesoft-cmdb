@@ -18,7 +18,7 @@ async function sendMuleSoftReq(settings, service, params){
         body:    JSON.stringify(body),
         headers: { 'Content-Type': 'application/json' },
     })
-    return (await response.json()).result;
+    return (await response.json());
 }
 
 async function textToFields(text){
