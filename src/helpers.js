@@ -22,7 +22,9 @@ async function sendMuleSoftReq(settings, service, params){
         },
     })).json();
     if (responseObj.returnCode === "00"){
-        return responseObj;
+        if (responseObj.result.score === "success"){
+            return responseObj;
+        }
     }
     throw responseObj;
 }
