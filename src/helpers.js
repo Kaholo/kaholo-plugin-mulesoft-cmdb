@@ -18,7 +18,7 @@ async function sendMuleSoftReq(settings, service, params){
         body:    JSON.stringify(body),
         headers: { 
             'Content-Type': 'application/json',
-            'Authorization': `Basic ${btoa(`${settings.username}:${settings.password}`)}`
+            'Authorization': `Basic ${Buffer.from(`${settings.username}:${settings.password}`).toString('base64')}`
         },
     })
     return (await response.json());
