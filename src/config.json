@@ -4,10 +4,13 @@
   "imgUrl": "logo.png",
   "execProgram": "node",
   "main": "app.js",
-  "version": "1.0.9",
-  "description":"Integration with MuleSoft CMDB",
-  "category": "CI/CD",
-  "settings":[
+  "version": "1.0.11",
+  "description": "Integration with MuleSoft CMDB",
+  "category": [
+    "FILES",
+    "CORE"
+  ],
+  "settings": [
     {
       "name": "endpoint",
       "viewName": "Endpoint URL",
@@ -45,23 +48,23 @@
           "type": "options",
           "options": [
             {
-              "id":"Component",
+              "id": "Component",
               "name": "Component"
             },
             {
-              "id":"Type",
+              "id": "Type",
               "name": "Type"
             },
             {
-              "id":"TypeClass",
+              "id": "TypeClass",
               "name": "TypeClass"
             },
             {
-              "id":"System",
+              "id": "System",
               "name": "System"
             },
             {
-              "id":"Manufacturer",
+              "id": "Manufacturer",
               "name": "Manufacturer"
             }
           ]
@@ -93,23 +96,23 @@
           "type": "options",
           "options": [
             {
-              "id":"Component",
+              "id": "Component",
               "name": "Component"
             },
             {
-              "id":"Type",
+              "id": "Type",
               "name": "Type"
             },
             {
-              "id":"TypeClass",
+              "id": "TypeClass",
               "name": "TypeClass"
             },
             {
-              "id":"System",
+              "id": "System",
               "name": "System"
             },
             {
-              "id":"Manufacturer",
+              "id": "Manufacturer",
               "name": "Manufacturer"
             }
           ]
